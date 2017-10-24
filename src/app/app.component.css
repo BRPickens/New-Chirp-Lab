@@ -1,5 +1,5 @@
 h1 {
-    color: rgb(49,192,237);
+    color: white;
     font-family: 'Lobster Two', cursive;
     font-size: 250%;
 }
@@ -18,7 +18,7 @@ h3 {
     width: 400px;
     background-color: rgb(49,192,237);
     text-align: center;
-    margin-left: 13em;
+    margin-left: 38%;
   }
   
   .user-header-image {
@@ -27,3 +27,15 @@ h3 {
     width: 50px;
     height: 50px;
   }
+
+.toolbar {
+    background-color: rgb(49,192,237);
+    text-align: center;
+    position: relative;
+}
+
+.toolbar-buttons {
+    position:relative;
+    left: 7em;
+    display: block;
+}

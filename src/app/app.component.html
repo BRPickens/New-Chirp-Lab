@@ -1,7 +1,20 @@
 <body>
+  <header>
+    <mat-toolbar class="toolbar">
+        <img class="logo" width="150" src="https://pre00.deviantart.net/badd/th/pre/i/2015/167/3/a/blue_bird_by_artbeautifulcloth-d8xizvw.png">        
+      <h1>Chirpster</h1>
+      <div class="toolbar-buttons">
+        <button mat-button>Home</button>
+        <button mat-button [matMenuTriggerFor]="menu">Profile</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Previous Chirps</button>
+        </mat-menu>
+        <button mat-button>Logout</button>
+      </div>
+    </mat-toolbar>
+  </header>
   <div style="text-align:center">
     <h1>Welcome back to {{title}}!</h1> 
-    <img class="logo" width="150" src="https://pre00.deviantart.net/badd/th/pre/i/2015/167/3/a/blue_bird_by_artbeautifulcloth-d8xizvw.png">
   </div>
   <br/>
   <br/>
@@ -13,7 +26,7 @@
     </mat-card-header>
     <mat-card-content>
       <mat-input-container>
-        <textarea matInput type="text" maxlength="70" rows="3" placeholder="Message"></textarea>
+        <textarea matInput type="text" maxlength="80" rows="3" placeholder="Message"></textarea>
       </mat-input-container>
     </mat-card-content>
     <mat-card-actions>
