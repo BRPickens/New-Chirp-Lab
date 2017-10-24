@@ -4,3 +4,55 @@
 body {
     background-color: palegoldenrod;
 }
+
+.company {
+    color: white;
+    font-family: 'Lobster Two', cursive;
+    font-size: 250%;
+    position: relative;
+    left: 12em;
+}
+
+h1 {
+    color: rgb(49,192,237);
+    font-family: 'Lobster Two', cursive;
+    font-size: 250%;
+}
+
+h3 {
+    color: rgb(49,192,237);
+    font-family: 'Lobster Two', cursive;
+}
+
+.account {
+    padding-left: 23em;
+}
+
+
+.user-card {
+    width: 400px;
+    background-color: rgb(49,192,237);
+    text-align: center;
+    margin-left: 32%;
+    position: relative;
+    margin-bottom: 28%;
+  }
+  
+  .user-header-image {
+    background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/1/19/NightwingCover.jpg/250px-NightwingCover.jpg');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+  }
+
+.toolbar {
+    background-color: rgb(49,192,237);
+    text-align: center;
+    position: relative;
+}
+
+.toolbar-buttons {
+    position:relative;
+    left: 23em;
+    display: block;
+}

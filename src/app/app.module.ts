@@ -23,7 +23,7 @@ import { SingleComponent } from './single/single.component';
     MatInputModule,
     MatCardModule,
     MatToolbarModule,
-    MatMenuModule
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

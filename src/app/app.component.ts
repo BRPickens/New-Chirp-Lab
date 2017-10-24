@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import { ChirpFormComponent } from './chirp-form/chirp-form.component';
+
+interface ICHirp {
+
+}
 
 @Component({
   selector: 'app-root',
@@ -6,5 +11,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Chirpster';
+
 }
