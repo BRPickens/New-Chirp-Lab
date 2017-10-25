@@ -32,7 +32,7 @@ const appRoutes: Routes = [
     MatCardModule,
     MatToolbarModule,
     MatMenuModule,
-    RouterModule.forRoot(appRoutes, {enableTracing: true})
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,7 +8,6 @@ import { RouterModule } from '@angular/router';
 })
 export class ChirpFormComponent implements OnInit {
 
-
   constructor() { }
 
   ngOnInit() {
@@ -16,7 +15,7 @@ export class ChirpFormComponent implements OnInit {
 
     }
   sendChirp() {
-    // this.route.navigate(['/list'])
+    this.route.navigate(['/list/list.component'])
   }
   }
 
