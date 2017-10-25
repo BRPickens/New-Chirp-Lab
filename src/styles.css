@@ -7,10 +7,10 @@ body {
 
 .company {
     color: white;
-    font-family: 'Lobster Two', cursive;
-    font-size: 250%;
+    font-family: 'Lobster Two', cursive !important;
+    font-size: 250% !important;
     position: relative;
-    left: 12em;
+    left: 5em;
 }
 
 h1 {
@@ -35,7 +35,6 @@ h3 {
     text-align: center;
     margin-left: 32%;
     position: relative;
-    margin-bottom: 28%;
   }
   
   .user-header-image {

@@ -1,5 +1,14 @@
 import { Component } from '@angular/core';
 import { ChirpFormComponent } from './chirp-form/chirp-form.component';
+import { RouterModule } from '@angular/router';
+import { ListComponent } from './list/list.component';
+
+RouterModule.forRoot([
+  {
+    path: 'chirps',
+    component: ListComponent
+  }
+])
 
 interface ICHirp {
 
@@ -11,5 +20,9 @@ interface ICHirp {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  chirps = [
 
+  ]
+
+  user: 'Black Joker';
 }
