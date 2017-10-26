@@ -7,15 +7,21 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./chirp-form.component.css']
 })
 export class ChirpFormComponent implements OnInit {
+  user: string;
+  chirp: string;
 
-  constructor() { }
+
+  constructor() {
+    this.user = 'Black Knight';
+    this.chirp = '';
+   }
 
   ngOnInit() {
 
 
     }
   sendChirp() {
-    this.route.navigate(['/list/list.component'])
+    // this.route.navigate(['/list/list.component'])
   }
   }
 
