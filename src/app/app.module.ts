@@ -6,8 +6,9 @@ import { AppComponent } from './app.component';
 import { ChirpFormComponent } from './chirp-form/chirp-form.component';
 import { ListComponent } from './list/list.component';
 import { SingleComponent } from './single/single.component';
-import { DataserviceComponent } from './dataservice/dataservice.component';
+import { DataService } from './services/data.service';
 import { RouterModule, Routes } from '@angular/router';
+import { FormControl } from '@angular/forms';
 
 const appRoutes: Routes = [
   {path: 'chirp-form', component: ChirpFormComponent},
@@ -15,13 +16,18 @@ const appRoutes: Routes = [
   {path: 'single', component: SingleComponent}
 ]
 
+RouterModule.forRoot([
+  {
+    path:''
+  }
+])
+
 @NgModule({
   declarations: [
     AppComponent,
     ChirpFormComponent,
     ListComponent,
     SingleComponent,
-    DataserviceComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +40,7 @@ const appRoutes: Routes = [
     MatMenuModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
