@@ -1,8 +1,7 @@
-<mat-toolbar color="primary" class="mat-elevation-z2" id='toolBar'>
-    <span>CHIRPER</span>
+<mat-toolbar color="primary" class="mat-elevation-z2" id='toolbar'>
+    <span>CHIRPSTER</span>
   
-    <!-- This fills the remaining space of the current row -->
-    <span class="example-fill-remaining-space"></span>
+    <span class="space"></span>
 
     <button mat-button [matMenuTriggerFor]="menu">Menu</button>
 
@@ -10,7 +9,7 @@
 
 <mat-menu #menu="matMenu">
     <button mat-menu-item routerLink='/chirp-form'>Chirp</button>
-    <button mat-menu-item routerLink='/list'>List</button>
+    <button mat-menu-item routerLink='/list'>Recent Thread</button>
     <button mat-menu-item routerLink='/'>Login</button>
 </mat-menu>
 

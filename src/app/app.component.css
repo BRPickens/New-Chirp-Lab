@@ -2,6 +2,6 @@
     width: 75%;
 }
 
-.example-fill-remaining-space {
+.space {
     flex: 1 1 auto;
   }

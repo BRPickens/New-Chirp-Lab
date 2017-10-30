@@ -1,4 +1,4 @@
-<h2>Timeline</h2>
+<h2>Watch Tower Thread</h2>
 <mat-card *ngFor='let chirp of chirps' appCardHover [routerLink]="['/single', chirp.id]" class='chirp-card'>
   <ng-container (click)='getChirp($event)'>
     <mat-card-title>{{ chirp.name }}</mat-card-title>
