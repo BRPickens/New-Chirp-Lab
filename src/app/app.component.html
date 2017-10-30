@@ -1,31 +1,17 @@
-<header>
-    <mat-toolbar class="toolbar">
-        <img class="logo" width="150" src="https://pre00.deviantart.net/badd/th/pre/i/2015/167/3/a/blue_bird_by_artbeautifulcloth-d8xizvw.png">        
-    <h1 class="company">Chirpster</h1>
-    <div class="toolbar-buttons">
-        <button mat-button>Home</button>
-        <button mat-button [matMenuTriggerFor]="menu">Profile</button>
-        <mat-menu #menu="matMenu">
-        <button mat-menu-item>Previous Chirps</button>
-        </mat-menu>
-        <button mat-button>Logout</button>
-    </div>
-    </mat-toolbar>
-</header>
-<body>
-<div style="text-align:center">
-    <h1>{{user}}</h1> 
-</div>
-<br/>
-<br/>
-<app-chirp-form></app-chirp-form>
-<app-list></app-list>
-<footer class="footer" style="text-align: center">
-    <img class="logo" width="50" src="https://pre00.deviantart.net/badd/th/pre/i/2015/167/3/a/blue_bird_by_artbeautifulcloth-d8xizvw.png">
-    <button mat-button>About</button>
-    <button mat-button>Blog</button>
-    <button mat-button>Career</button>
-    <img class="logo" width="50" src="https://pre00.deviantart.net/badd/th/pre/i/2015/167/3/a/blue_bird_by_artbeautifulcloth-d8xizvw.png">
-    <p>© 2017 Chirpster</p>
-</footer>
+<mat-toolbar color="primary" class="mat-elevation-z2" id='toolBar'>
+    <span>CHIRPER</span>
+  
+    <!-- This fills the remaining space of the current row -->
+    <span class="example-fill-remaining-space"></span>
+
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+
+</mat-toolbar>
+
+<mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink='/chirp-form'>Chirp</button>
+    <button mat-menu-item routerLink='/list'>List</button>
+    <button mat-menu-item routerLink='/'>Login</button>
+</mat-menu>
+
 <router-outlet></router-outlet>

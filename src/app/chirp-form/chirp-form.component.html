@@ -1,7 +1,29 @@
-<mat-card class="user-card1" style="text-align: center">
+<h2>Chirp Something</h2>
+
+<mat-card class='form-container'>
+  <mat-form-field color='primary'>
+    <input #name matInput placeholder='Name'>
+  </mat-form-field>
+  
+  <mat-form-field>
+    <input #user matInput placeholder='User'>
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea #message matInput placeholder='Chirp' id='textArea'></textarea>
+  </mat-form-field>
+
+  <button (click)='newChirp(name.value, user.value, message.value)' mat-button color='primary'>CHIZZURP</button>
+</mat-card>
+
+
+
+
+
+<!-- <mat-card class="user-card1" style="text-align: center">
   <mat-card-header>
     <div mat-card-avatar class="user-header-image1"></div>
-    <mat-card-title style="color:red;">{{user}}</mat-card-title>
+    <mat-card-title style="color:red;">{{}}</mat-card-title>
     <mat-card-subtitle style="color:red;">Level 36</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
@@ -18,4 +40,4 @@
 </mat-card>
 <br/>
 <br/>
-<br/>
+<br/> -->

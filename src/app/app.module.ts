@@ -1,46 +1,63 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatFormFieldModule, MatInputModule, MatIconModule, MatCardModule, MatCardContent, MatToolbarModule, MatMenuModule } from '@angular/material';
+import { FormsModule, FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
+import { NgModule, Injectable, Directive, ElementRef } from '@angular/core';
+import { NgForOf } from '@angular/common';
+
 import { AppComponent } from './app.component';
-import { ChirpFormComponent } from './chirp-form/chirp-form.component';
 import { ListComponent } from './list/list.component';
 import { SingleComponent } from './single/single.component';
+import { ChirpFormComponent } from './chirp-form/chirp-form.component';
+import { LoginFormComponent } from './login-form/login-form.component';
+
+import { IChirp, CHIRPS } from './data';
 import { DataService } from './services/data.service';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule, MatCardModule, MatMenuModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatToolbarModule, MatIconModule } from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
-import { FormControl } from '@angular/forms';
 
 const appRoutes: Routes = [
-  {path: 'chirp-form', component: ChirpFormComponent},
-  {path: 'list', component: ListComponent},
-  {path: 'single', component: SingleComponent}
-]
-
-RouterModule.forRoot([
   {
-    path:''
+    path: '', 
+    component: LoginFormComponent
+  },
+  {
+    path: 'chirp-form', 
+    component: ChirpFormComponent
+  }, 
+  {
+    path: 'list', 
+    component: ListComponent
+  },
+  {
+    path: 'single/:id', 
+    component: SingleComponent
   }
-])
+]
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChirpFormComponent,
     ListComponent,
     SingleComponent,
+    ChirpFormComponent,
+    LoginFormComponent
   ],
   imports: [
+    RouterModule.forRoot(appRoutes),
     BrowserModule,
     BrowserAnimationsModule,
-    MatButtonModule,
+    ReactiveFormsModule,
+    MatButtonModule, 
+    MatCardModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatIconModule,
     MatFormFieldModule,
     MatInputModule,
-    MatCardModule,
-    MatToolbarModule,
-    MatMenuModule,
-    RouterModule.forRoot(appRoutes)
+    MatSelectModule
   ],
-  providers: [DataService],
+  providers: [DataService, FormBuilder],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
