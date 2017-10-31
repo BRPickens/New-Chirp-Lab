@@ -5,37 +5,11 @@ body {
     background-color: palegoldenrod;
 }
 
-.company {
-    color: white;
-    font-family: 'Lobster Two', cursive !important;
-    font-size: 250% !important;
-    position: relative;
-    left: 5em;
+.form-container {
+    background-color: lightblue;
 }
 
-h1 {
-    color: rgb(49,192,237);
-    font-family: 'Lobster Two', cursive;
-    font-size: 250%;
+.mat-card {
+    background-color: lightblue;
 }
 
-h3 {
-    color: rgb(49,192,237);
-    font-family: 'Lobster Two', cursive;
-}
-
-.account {
-    padding-left: 23em;
-}
-
-.toolbar {
-    background-color: rgb(49,192,237);
-    text-align: center;
-    position: relative;
-}
-
-.toolbar-buttons {
-    position:relative;
-    left: 23em;
-    display: block;
-}
