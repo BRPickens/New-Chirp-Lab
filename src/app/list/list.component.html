@@ -1,5 +1,6 @@
 <h2>Watch Tower Thread</h2>
-
+<app-chirp-form></app-chirp-form>
+  <br/>
 <mat-card *ngFor='let chirp of chirps' appCardHover [routerLink]="['/single', chirp.id]" class='chirp-card'>
   <ng-container (click)='getChirp($event)'>
     <mat-card-title>{{ chirp.name }}</mat-card-title>
